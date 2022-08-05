@@ -6,23 +6,23 @@ requirements = []  # add Python dependencies here
 # e.g., requirements = ["PyYAML"]
 
 setup(
-    name='awx-custom-credential-plugin-example',
+    name='awx-passwordstate-credential-plugin',
     version='0.1',
-    author='Ansible, Inc.',
-    author_email='info@ansible.com',
-    description='',
+    author='R. van Dongen',
+    author_email='info@qonnect-it.nl',
+    description='Passwordstate compatible credential plugin',
     long_description='',
     license='Apache License 2.0',
     keywords='ansible',
-    url='http://github.com/ansible/awx-custom-credential-plugin-example',
-    packages=['awx_custom_credential_plugin_example'],
+    url='https://github.com/royvandongen/awx-passwordstate-credential-plugin',
+    packages=['awx_passwordstate_credential_plugin'],
     include_package_data=True,
     zip_safe=False,
     setup_requires=[],
     install_requires=requirements,
     entry_points = {
         'awx.credential_plugins': [
-            'example_plugin = awx_custom_credential_plugin_example:example_plugin',
+            'passwordstate_plugin = awx_passwordstate_credential_plugin:passwordstate_plugin',
         ]
     }
 )
